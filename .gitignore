@@ -1,2 +1,4 @@
 *.env
 *.jsonl
+ReadmeIssuesModel/*
+repo-issue-gen/*

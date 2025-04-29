@@ -67,7 +67,7 @@ def buildDataset(max_repos=5):
     return data
 
 if __name__ == "__main__":
-    dataset = buildDataset(max_repos=3000)
+    dataset = buildDataset(max_repos=10000)
     with open("github_readme_issues_model_ready.jsonl", "w") as f:
         for item in dataset:
             issue_text = ""

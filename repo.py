@@ -5,7 +5,7 @@ dataset = load_dataset("json", data_files="github_readme_issues_model_ready.json
 tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-base")
 
 def tokenize(example):
-    return tokenizer(example["input"], text_target=example["output"], truncation=True, max_length=512, padding=True)
+    return tokenizer(example["input"], text_target=example["output"], truncation=True, max_length=512, padding="max_length")
 
 tokenized_dataset = dataset.map(tokenize)
 
